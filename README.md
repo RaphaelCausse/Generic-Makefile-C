@@ -5,6 +5,7 @@
 
 Generic Makefile for C projects. 
 This is only a base file that you can use and change as you want.
+<br><br>
 
 ## PROJECT STRUCTURE
 
@@ -17,10 +18,11 @@ Project
 ├───Makefile
 ├───src
 │   └───*.c
-│   └───include
-│       └───*.h
+│   └───*.h
+│   └───...
 └───...
 ```
+<br>
 
 ### FEATURES
 
@@ -28,16 +30,21 @@ To **compile** the project :
 ```bash
 $   make
 ```
-or **compile** and copy to /usr/local/bin :
+or **compile and install** in /usr/local/bin :
 ```bash
 $   make install
 ```
-To **clean** the project folder :
+To **uninstall** from /usr/local/bin :
+```bash
+make uninstall
+```
+To **clean** the project directory :
 ```bash
 $   make clean
 ```
+<br>
 
 ### AUTHOR
 
-Raphael CAUSSE, 11/2021
+Raphael CAUSSE, O1/2022
 raphael.causse2@gmail.com
