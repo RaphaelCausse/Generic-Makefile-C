@@ -10,7 +10,7 @@ TARGET	=$(BINDIR)prog
 
 # Project set up, compiler flags and linker flags
 CC =gcc -fsanitize=address
-CFLAGS =-g -std=c17 -O3 -Wall
+CFLAGS =-g -std=c17 -O3 -Wall -Iinclude
 LFLAGS =-lm
 
 # Files set up
@@ -29,19 +29,22 @@ $(OBJDIR)%.o: $(SRCDIR)%.c
 	@mkdir -p $(OBJDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Installation in /usr/local/bin for global usage
-.PHONY: install
-install: all
-	sudo cp $(TARGET) /usr/local/bin
+# Run target and clean project directory
+.PHONY: run clean
+run:
+	./$(TARGET)
 
-uninstall:
-	sudo rm /usr/local/bin/$(TARGET)
-
-# Clean project directory
-.PHONY: clean
 clean:
 	@rm -rf $(BINDIR) $(OBJDIR)
 	@echo "Cleanup completed !"
 
 objclean:
 	@rm -rf $(OBJDIR)
+
+# Installation in /usr/local/bin for global usage
+.PHONY: install uninstall
+install: 
+	sudo cp $(TARGET) /usr/local/bin
+
+uninstall:
+	sudo rm /usr/local/bin/$(TARGET)
