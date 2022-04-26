@@ -16,35 +16,42 @@ Project
 ├───README.md
 ├───LICENSE.md
 ├───Makefile
+├───include
+│   └───*.h
 ├───src
 │   └───*.c
-│   └───*.h
-│   └───...
 └───...
 ```
 <br>
 
-### FEATURES
+## INSTALLATION
 
 To **compile** the project :
 ```bash
-$   make
+make
 ```
-or **compile and install** in /usr/local/bin :
-```bash
-$   make install
+To **run** the executable :
 ```
-To **uninstall** from /usr/local/bin :
-```bash
-make uninstall
-```
-To **clean** the project directory :
-```bash
-$   make clean
+make run
 ```
 <br>
 
-### AUTHOR
+## FEATURES
 
-Raphael CAUSSE, O1/2022
-raphael.causse2@gmail.com
+To **clean** the project directory :
+```bash
+make clean
+```
+To **install** the executable in /usr/local/bin :
+```bash
+make install
+```
+To **uninstall** the executable from /usr/local/bin :
+```bash
+make uninstall
+```
+<br>
+
+## AUTHOR
+
+Raphael CAUSSE, 01/2022
