@@ -31,11 +31,11 @@ Project
 
 **Clone** this repository:
 ```
-git clone https://github.com/RaphaelCausse/Generic_Makefile_C.git
+git clone https://github.com/RaphaelCausse/Generic-Makefile-C.git
 ```
 **Move** to the cloned directory :
 ```
-cd Huffman_Coding
+cd Generic-Makefile-C
 ```
 **Compile** the project :
 ```bash
