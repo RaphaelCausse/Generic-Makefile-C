@@ -29,11 +29,19 @@ Project
 
 ## INSTALLATION
 
-To **compile** the project :
+**Clone** this repository:
+```
+git clone https://github.com/RaphaelCausse/Generic_Makefile_C.git
+```
+**Move** to the cloned directory :
+```
+cd Huffman_Coding
+```
+**Compile** the project :
 ```bash
 make
 ```
-To **run** the executable :
+**Run** the executable :
 ```
 make run
 ```
@@ -41,7 +49,7 @@ make run
 
 ## FEATURES
 
-To **clean** the project directory :
+**Clean** the project directory :
 ```bash
 make clean
 ```
@@ -49,4 +57,6 @@ make clean
 
 ## AUTHOR
 
-Raphael CAUSSE, 01/2022
+Raphael CAUSSE, 01/2022.
+
+Developped on Manjaro Linux, Visual Studio Code.
