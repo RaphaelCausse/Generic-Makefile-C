@@ -1,17 +1,18 @@
-# Generic Makefile example for C projects
+# Generic Makefile for C projects
+# Raphael CAUSSE, 01/2022
 
 # Directories set up
-BINDIR =bin/
-OBJDIR =obj/
-SRCDIR =src/
+BINDIR = bin/
+OBJDIR = obj/
+SRCDIR = src/
 
 # Executable name
-TARGET	=$(BINDIR)prog
+TARGET = $(BINDIR)prog
 
 # Project set up, compiler flags and linker flags
-CC =gcc -fsanitize=address
-CFLAGS =-g -std=c17 -O3 -Wall -Iinclude
-LFLAGS =-lm
+CC = gcc -fsanitize=address
+CFLAGS = -g -O3 -Wall -Iinclude
+LFLAGS = -lm
 
 # Files set up
 SRC := $(wildcard $(SRCDIR)*.c)
@@ -40,11 +41,3 @@ clean:
 
 objclean:
 	@rm -rf $(OBJDIR)
-
-# Installation in /usr/local/bin for global usage
-.PHONY: install uninstall
-install: 
-	sudo cp $(TARGET) /usr/local/bin
-
-uninstall:
-	sudo rm /usr/local/bin/$(TARGET)

@@ -3,7 +3,8 @@
 
 # GENERIC MAKEFILE
 
-Generic Makefile for C projects. 
+Generic Makefile for C projects.
+
 This is only a base file that you can use and change as you want.
 <br><br>
 
@@ -16,6 +17,8 @@ Project
 ├───README.md
 ├───LICENSE.md
 ├───Makefile
+├───bin
+│   └───prog
 ├───include
 │   └───*.h
 ├───src
@@ -41,14 +44,6 @@ make run
 To **clean** the project directory :
 ```bash
 make clean
-```
-To **install** the executable in /usr/local/bin :
-```bash
-make install
-```
-To **uninstall** the executable from /usr/local/bin :
-```bash
-make uninstall
 ```
 <br>
 
